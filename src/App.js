@@ -2,6 +2,16 @@
 
 import styled from '@emotion/styled';
 import Background from './Images/Background.png';
+import card1 from './Images/card1.svg';
+import card3 from './Images/card3.svg';
+import cardbg from './Images/cardbg.svg';
+import Client1 from './Images/Client1.png';
+import Client2 from './Images/Client2.png';
+import Client3 from './Images/Client3.png';
+import Client4 from './Images/Client4.svg';
+import Client5 from './Images/Client5.svg';
+import Client6 from './Images/Client6.svg';
+import girlcard from './Images/girlcard.svg';
 import logo from './Images/logo.svg';
 
 const HeroContainer = styled.div`
@@ -127,6 +137,109 @@ const ButtonStyleDemo = styled.div`
   margin: 7px 0px 0px 30px;
   padding: 10px;
 `;
+const Client = styled.div`
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+`;
+const ClientBlock = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 900px;
+  flex-direction: row;
+  column-gap: 20px;
+  row-gap: 20px;
+  img {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+  }
+`;
+
+const TextContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 30px 0;
+  margin-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64px;
+
+  h2,
+  span {
+    font-family: sans-serif;
+    font-size: 35px;
+    line-height: 46px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+  }
+  span {
+    color: #50b8dc;
+    display: block;
+  }
+`;
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  height: auto;
+`;
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 401px;
+  position: relative;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 23px;
+  background-image: url(${cardbg});
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+const CardImage = styled.img`
+  width: 190px;
+  position: absolute;
+  top: -72px;
+`;
+const CardImage2 = styled.img`
+  width: 140px;
+  position: absolute;
+  top: -74px;
+  margin-left: 10px;
+`;
+const CardImage3 = styled.img`
+  width: 150px;
+  position: absolute;
+  top: -74px;
+`;
+const CardContent = styled.div`
+  margin-top: 160px;
+  padding-right: 10px;
+  padding-left: 10px;
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  p {
+    color: #d4d6ff;
+    font-size: 17px;
+    line-height: 24px;
+    width: 100%;
+    opacity: 0.9;
+  }
+`;
 
 function App() {
   return (
@@ -171,6 +284,67 @@ function App() {
             </div>
           </Introduction>
         </Information>
+        <Client>
+          <ClientBlock>
+            <img src={Client2} alt="client logo" />
+
+            <img src={Client1} alt="client logo" />
+
+            <img src={Client3} alt="client logo" />
+
+            <img src={Client4} alt="client logo" />
+
+            <img src={Client5} alt="client logo" />
+
+            <img src={Client6} alt="client logo" />
+            <img src={Client4} alt="client logo" />
+          </ClientBlock>
+        </Client>
+        <div className="howItWork">
+          <div>
+            <TextContainer>
+              <h2>
+                We get it. Reliable designers <span>are hard to find</span>
+              </h2>
+            </TextContainer>
+            <CardContainer>
+              <Card>
+                <CardImage src={card3} alt="" />
+
+                <CardContent>
+                  <h3>Poor Quality</h3>
+                  <p>
+                    You're tired of the guessing game to find the right
+                    designer.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <div>
+                  <CardImage2 src={girlcard} alt="" />
+                </div>
+                <CardContent>
+                  <h3>Bad Communication</h3>
+                  <p>
+                    You're fed up with having to explain yourself multiple
+                    times.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <div>
+                  <CardImage3 src={card1} alt="" />
+                </div>
+                <CardContent>
+                  <h3>Missed Deadlines</h3>
+                  <p>
+                    You lose hope as deadlines are missed over and over again.
+                  </p>
+                </CardContent>
+              </Card>
+            </CardContainer>
+          </div>
+        </div>
       </HeroContainer>
     </div>
   );
