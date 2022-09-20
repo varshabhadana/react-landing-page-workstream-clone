@@ -18,9 +18,8 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 4px;
-  margin-right: 30px;
-  margin-left: 30px;
 
+  align-items: center;
   width: 100%;
 `;
 const LogoStyle = styled.img`
@@ -40,6 +39,7 @@ const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-left: 90px;
 `;
 const NavigationMenu = styled.div`
   display: inline-flex;
@@ -62,13 +62,70 @@ const Information = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 24px;
 `;
 const Introduction = styled.div`
   display: flex;
   flex-direction: column;
-  width: 600px;
   align-items: center;
   text-align: center;
+  width: 1200px;
+  height: 100vh;
+  padding-top: 120px;
+  h1 {
+    font-family: sans-serif;
+    font-size: 44px;
+    line-height: 24px;
+    width: 800px;
+  }
+  p {
+    width: 640px;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+`;
+const ButtonStyle = styled.div`
+  width: 279px;
+  height: 58px;
+  border-radius: 45px;
+  background-color: #fd435a;
+  box-shadow: 0px 0px 0px 6px rgb(253 87 108/25%);
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+`;
+const ButtonStyleDemo = styled.div`
+  width: 200px;
+  height: 50px;
+  border-radius: 45px;
+  background-color: #fd576c;
+  box-shadow: 0px 0px 0px 6px rgb(253 87 108/25%);
+  cursor: pointer;
+
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7px 0px 0px 30px;
+  padding: 10px;
 `;
 
 function App() {
@@ -90,30 +147,27 @@ function App() {
                 <NavAtag href="a">Our Work</NavAtag>
                 <NavAtag href="a">Our Platform</NavAtag>
                 <NavAtag href="a">Login</NavAtag>
+                <a href="a">More</a>
+                <ButtonStyleDemo href="a">Schedule Demo</ButtonStyleDemo>
               </Navbar>
-            </div>
-            <div>
-              <a href="a">More</a>
-            </div>
-            <div>
-              <a href="a">Schedule Demo</a>
             </div>
           </NavigationMenu>
         </Header>
         <Information>
           <Introduction>
             <div>
-              <h1>Get A Superhero Design Team To Grow Your Business</h1>
+              <h1>Get A Superhero Design Team</h1>
+              <h1>To Grow Your Business</h1>
             </div>
             <div>
-              <h3>
+              <p>
                 We provide an experienced design team that works with you
                 everyday to create high-quality design assets to help grow your
                 business. Zero headaches, fixed pricing and no contracts.
-              </h3>
+              </p>
             </div>
             <div>
-              <a href="a">See Our Pricing</a>
+              <ButtonStyle href="a">SEE OUR PRICING</ButtonStyle>
             </div>
           </Introduction>
         </Information>
