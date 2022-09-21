@@ -168,6 +168,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 64px;
+  margin-top: 64px;
 
   h2,
   span {
@@ -343,6 +344,17 @@ function App() {
                 </CardContent>
               </Card>
             </CardContainer>
+          </div>
+        </div>
+        <TextContainer>
+          <h2>
+            Design doesn't have to be hard. <span>We make it easy.</span>
+          </h2>
+        </TextContainer>
+        <div>
+          <div>
+            <div></div>
+            <div>img</div>
           </div>
         </div>
       </HeroContainer>
