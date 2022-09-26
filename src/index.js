@@ -18,6 +18,7 @@ root.render(
           background-color: #0f123d;
           padding: 0px;
           color: #fff;
+          font-family: 'DM Sans', sans-serif;
         }
         a {
           color: #fff;

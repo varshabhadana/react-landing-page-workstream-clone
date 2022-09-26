@@ -12,6 +12,12 @@ import Client4 from './Images/Client4.svg';
 import Client5 from './Images/Client5.svg';
 import Client6 from './Images/Client6.svg';
 import girlcard from './Images/girlcard.svg';
+import icon1 from './Images/icon1.svg';
+import icon2 from './Images/icon2.svg';
+import icon3 from './Images/icon3.svg';
+import illustration1 from './Images/illustration1.svg';
+import illustration2 from './Images/illustration2.svg';
+import illustration3 from './Images/illustration3.svg';
 import logo from './Images/logo.svg';
 
 const HeroContainer = styled.div`
@@ -164,10 +170,10 @@ const TextContainer = styled.div`
   width: 100%;
   justify-content: center;
   padding: 30px 0;
-  margin-bottom: 50px;
+
   flex-direction: column;
   align-items: center;
-  margin-bottom: 64px;
+
   margin-top: 64px;
 
   h2,
@@ -240,6 +246,41 @@ const CardContent = styled.div`
     width: 100%;
     opacity: 0.9;
   }
+`;
+const IllustrationContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+
+  margin-left: 60px;
+`;
+const IconContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+`;
+const ParagraphContent = styled.div`
+  color: #d4d6ff;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.2px;
+  width: 484px;
+`;
+
+const Illustration = styled.img`
+  width: 600px;
+`;
+const Icon = styled.img`
+  width: 80px;
+  height: 80px;
 `;
 
 function App() {
@@ -351,12 +392,68 @@ function App() {
             Design doesn't have to be hard. <span>We make it easy.</span>
           </h2>
         </TextContainer>
-        <div>
+        <IllustrationContainer>
           <div>
-            <div></div>
-            <div>img</div>
+            <IconContainer>
+              <Icon src={icon1} alt="" />
+              <h3>Breath-taking Designs</h3>
+            </IconContainer>
+            <div>
+              <ParagraphContent>
+                All of our designers are carefully vetted and have years of
+                experience working in the design industry.
+                <br />
+                <br />
+                You'll get a dedicated UI Designer, Graphic Designer,
+                Illustrator and Project Manager. With a full design team,
+                getting breath-taking designs couldn't be any easier!
+              </ParagraphContent>
+            </div>
           </div>
-        </div>
+          <div>
+            <Illustration src={illustration1} alt="" />
+          </div>
+        </IllustrationContainer>
+        <IllustrationContainer>
+          <div>
+            <Illustration src={illustration2} alt="" />
+          </div>
+          <div>
+            <IconContainer>
+              <Icon src={icon2} alt="" />
+              <h3>Communication That Matters</h3>
+            </IconContainer>
+            <div>
+              <ParagraphContent>
+                With a dedicated Project Manager who cares about your success
+                and direct live-chat access to your experienced designers,
+                communication issues will be no more!
+              </ParagraphContent>
+            </div>
+          </div>
+        </IllustrationContainer>
+        <IllustrationContainer>
+          <div>
+            <IconContainer>
+              <Icon src={icon3} alt="" />
+              <h3>No More Missed Deadlines </h3>
+            </IconContainer>
+            <div>
+              <ParagraphContent>
+                Need that design done on a specific date? You can trust us to
+                deliver it on time. Once we commit to a date, we'll get it done.
+                <br />
+                <br />
+                Job requests will on average be delivered in a few business
+                days. Simpler tasks such as graphic designs and revisions will
+                be delivered within 24 hours.
+              </ParagraphContent>
+            </div>
+          </div>
+          <div>
+            <Illustration src={illustration3} alt="" />
+          </div>
+        </IllustrationContainer>
       </HeroContainer>
     </div>
   );
